@@ -32,15 +32,15 @@ namespace GradeBook.GradeBooks
 
             return 'F';
         }
-        public void CalculateStatics()
+        override public void CalculateStatistics()
         {
             if (Students.Count < 5) Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
             else base.CalculateStatistics();
         }
-        public void CalculateStudentStatistics()
+        override public void CalculateStudentStatistics(string name)
         {
             if (Students.Count < 5 ) Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
-            else base.CalculateStudentStatistics();
+            else base.CalculateStudentStatistics(name);
         }
     }
 }
